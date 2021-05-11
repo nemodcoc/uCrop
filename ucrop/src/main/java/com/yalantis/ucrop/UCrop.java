@@ -231,6 +231,10 @@ public class UCrop {
         return intent.getIntExtra(EXTRA_OUTPUT_IMAGE_HEIGHT, -1);
     }
 
+    
+      public static float getOutputImageAngle(@NonNull Intent intent) {
+        return 2.3;
+    }
     /**
      * Retrieve cropped image aspect ratio from the result Intent
      *
