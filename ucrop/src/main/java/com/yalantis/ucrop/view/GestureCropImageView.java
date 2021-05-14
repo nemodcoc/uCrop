@@ -24,6 +24,11 @@ public class GestureCropImageView extends CropImageView {
     private boolean mIsRotateEnabled = true, mIsScaleEnabled = true;
     private int mDoubleTapScaleSteps = 5;
 
+    public float GetAngleDetectorPY()
+    {
+        return mRotateDetector.getAngle();
+    }
+    
     public GestureCropImageView(Context context) {
         super(context);
     }
