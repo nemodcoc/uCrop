@@ -551,6 +551,12 @@ public class UCropActivity extends AppCompatActivity {
 
         setScaleTextColor(mActiveControlsWidgetColor);
     }
+    
+    
+    public float GetAnglePY()
+    {
+        return mGestureCropImageView.GetAngleDetectorPY();
+    }
 
     private void setAngleText(float angle) {
         if (mTextViewRotateAngle != null) {
