@@ -553,7 +553,7 @@ public class UCropActivity extends AppCompatActivity {
     }
     
     
-    public static float GetAnglePY()
+    public float GetAnglePY()
     {
         return mGestureCropImageView.GetAngleDetectorPY();
     }
