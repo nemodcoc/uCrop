@@ -239,7 +239,7 @@ public class UCrop {
     //---------------------------------
     
       public  float getOutputImageAngle() {
-          return 42;//mCropIntent.GetAnglePY();
+          return mCropIntent.GetAnglePY();
     }
   //___________________________________________________
     /**
