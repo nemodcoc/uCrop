@@ -234,12 +234,12 @@ public class UCrop {
     //___________________________________________________
     
     public static float getOutputImageAngle2(@NonNull Intent intent) {
-          return 123456789.0;//intent.GetAnglePY();
+          return 42;//intent.GetAnglePY();
     }
     //---------------------------------
     
       public  float getOutputImageAngle() {
-          return 123456789.0;//mCropIntent.GetAnglePY();
+          return 42;//mCropIntent.GetAnglePY();
     }
   //___________________________________________________
     /**
