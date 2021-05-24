@@ -173,6 +173,8 @@ public class UCropActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_crop) {
+            Log.i("ProvaMariano.py", mGestureCropImageView.getCurrentAnglePY());
+            Log.i("ProvaMariano.py", mGestureCropImageView.getCurrentAngle());
             cropAndSaveImage();
             return true;
         } else if (item.getItemId() == android.R.id.home) {
