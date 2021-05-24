@@ -673,7 +673,8 @@ public class UCropActivity extends AppCompatActivity {
 
         //Aggiunta Mariano PY
         float prova = this.GetAnglePY();
-        System.out.print(prova);
+        Log.i('Prova Mariano.py', prova);
+        //System.out.print(prova);
         
         mGestureCropImageView.cropAndSaveImage(mCompressFormat, mCompressQuality, new BitmapCropCallback() {
 
