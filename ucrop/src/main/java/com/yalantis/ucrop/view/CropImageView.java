@@ -79,7 +79,7 @@ public class CropImageView extends TransformImageView {
                 mCropRect, RectUtils.trapToRect(mCurrentImageCorners),
                 getCurrentScale(), getCurrentAngle());
         
-        Log.i("Prova Mariano.py:", getCurrentAngle().toString());
+        Log.i("Prova Mariano.py:", Float.toString(getCurrentAngle()));
 
         final CropParameters cropParameters = new CropParameters(
                 mMaxResultImageSizeX, mMaxResultImageSizeY,
