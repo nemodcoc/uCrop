@@ -169,6 +169,12 @@ public class UCropActivity extends AppCompatActivity {
         menu.findItem(R.id.menu_loader).setVisible(mShowLoader);
         return super.onPrepareOptionsMenu(menu);
     }
+    //____________________________________________
+    public float getAngleFromGesturePy(){
+        Log.i("Angolo in UCropActivity(getAngleFromGesturePy) - Mariano.py",  mGestureCropImageView.getCurrentAngle());
+        return mGestureCropImageView.getCurrentAngle();
+    }
+    //____________________________________________
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
