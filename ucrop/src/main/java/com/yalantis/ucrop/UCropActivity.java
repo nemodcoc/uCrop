@@ -171,7 +171,7 @@ public class UCropActivity extends AppCompatActivity {
     }
     //____________________________________________
     public float getAngleFromGesturePy(){
-        Log.i("Angolo in UCropActivity(getAngleFromGesturePy) - Mariano.py",  mGestureCropImageView.getCurrentAngle());
+        Log.i("Angolo in UCropActivity(getAngleFromGesturePy) - Mariano.py",  Float.toString(mGestureCropImageView.getCurrentAngle()));
         return mGestureCropImageView.getCurrentAngle();
     }
     //____________________________________________
