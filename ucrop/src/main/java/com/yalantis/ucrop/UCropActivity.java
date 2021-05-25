@@ -174,7 +174,7 @@ public class UCropActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_crop) {
             //Log.i("ProvaMariano.py", mGestureCropImageView.getCurrentAnglePY());
-            Log.i("ProvaMariano.py", Float.toString(mGestureCropImageView.getCurrentAngle()));
+            Log.i("Anfgolo in UCropActivity(onOptionsItemSelected) - Mariano.py", Float.toString(mGestureCropImageView.getCurrentAngle()));
             cropAndSaveImage();
             return true;
         } else if (item.getItemId() == android.R.id.home) {
@@ -675,7 +675,7 @@ public class UCropActivity extends AppCompatActivity {
 
         //Aggiunta Mariano PY
         float prova = this.GetAnglePY();
-        Log.i(TAG, Float.toString(prova));
+        Log.i("Angolo in UCropActivity(cropAndSaveImage) - Mariano.py", Float.toString(prova));
         //System.out.print(prova);
         
         mGestureCropImageView.cropAndSaveImage(mCompressFormat, mCompressQuality, new BitmapCropCallback() {
