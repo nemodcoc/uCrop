@@ -680,7 +680,7 @@ public class UCropActivity extends AppCompatActivity {
         supportInvalidateOptionsMenu();
 
         //Aggiunta Mariano PY
-        float prova = this.GetAnglePY();
+        float prova = this.getAngleFromGesturePy();
         Log.i("Angolo in UCropActivity(cropAndSaveImage) - Mariano.py", Float.toString(prova));
         //System.out.print(prova);
         
@@ -722,6 +722,7 @@ public class UCropActivity extends AppCompatActivity {
     }*/
 
     protected void setResultUri(Uri uri, float resultAspectRatio, int offsetX, int offsetY, int imageWidth, int imageHeight, float imageAngle) {
+        Log.i("Sono in setResultUri - Mariano.py", Float.toString(imageAngle));
         setResult(RESULT_OK, new Intent()
                 .putExtra(UCrop.EXTRA_OUTPUT_URI, uri)
                 .putExtra(UCrop.EXTRA_OUTPUT_CROP_ASPECT_RATIO, resultAspectRatio)
