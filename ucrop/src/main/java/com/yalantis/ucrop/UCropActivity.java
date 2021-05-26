@@ -169,18 +169,10 @@ public class UCropActivity extends AppCompatActivity {
         menu.findItem(R.id.menu_loader).setVisible(mShowLoader);
         return super.onPrepareOptionsMenu(menu);
     }
-    //____________________________________________
-    public float getAngleFromGesturePy(){
-        Log.i("Angolo in UCropActivity(getAngleFromGesturePy) - Mariano.py",  Float.toString(mGestureCropImageView.getCurrentAngle()));
-        return mGestureCropImageView.getCurrentAngle();
-    }
-    //____________________________________________
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_crop) {
-            //Log.i("ProvaMariano.py", mGestureCropImageView.getCurrentAnglePY());
-            Log.i("Anfgolo in UCropActivity(onOptionsItemSelected) - Mariano.py", Float.toString(mGestureCropImageView.getCurrentAngle()));
             cropAndSaveImage();
             return true;
         } else if (item.getItemId() == android.R.id.home) {
@@ -560,12 +552,6 @@ public class UCropActivity extends AppCompatActivity {
         setScaleTextColor(mActiveControlsWidgetColor);
     }
     
-    
-    public float GetAnglePY()
-    {
-        return mGestureCropImageView.GetAngleDetectorPY();
-    }
-
     private void setAngleText(float angle) {
         if (mTextViewRotateAngle != null) {
             mTextViewRotateAngle.setText(String.format(Locale.getDefault(), "%.1f°", angle));
@@ -678,11 +664,6 @@ public class UCropActivity extends AppCompatActivity {
         mBlockingView.setClickable(true);
         mShowLoader = true;
         supportInvalidateOptionsMenu();
-
-        //Aggiunta Mariano PY
-        float prova = this.getAngleFromGesturePy();
-        Log.i("Angolo in UCropActivity(cropAndSaveImage) - Mariano.py", Float.toString(prova));
-        //System.out.print(prova);
         
         mGestureCropImageView.cropAndSaveImage(mCompressFormat, mCompressQuality, new BitmapCropCallback() {
 
@@ -711,7 +692,7 @@ public class UCropActivity extends AppCompatActivity {
         });
     }
     /*
-    CHE DIO ME LA MANDI BUONA Mariano.py
+    CHE DIO ME LA MANDI BUONA, E POSSIBILMENTE... Mariano.py
     protected void setResultUri(Uri uri, float resultAspectRatio, int offsetX, int offsetY, int imageWidth, int imageHeight) {
         setResult(RESULT_OK, new Intent()
                 .putExtra(UCrop.EXTRA_OUTPUT_URI, uri)
