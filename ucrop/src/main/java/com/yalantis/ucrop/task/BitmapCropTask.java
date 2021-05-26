@@ -135,8 +135,6 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
         cropOffsetY = Math.round((mCropRect.top - mCurrentImageRect.top) / mCurrentScale);
         mCroppedImageWidth = Math.round(mCropRect.width() / mCurrentScale);
         mCroppedImageHeight = Math.round(mCropRect.height() / mCurrentScale);
-
-        Log.i("Angolo in BitmapCropTask - Mariano.py", Float.toString(mCurrentAngle));
         
         boolean shouldCrop = shouldCrop(mCroppedImageWidth, mCroppedImageHeight);
         Log.i(TAG, "Should crop: " + shouldCrop);
