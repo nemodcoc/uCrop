@@ -696,7 +696,10 @@ public class UCropActivity extends AppCompatActivity {
             
             @Override
             public void onBitmapCropped(@NonNull Uri resultUri, int offsetX, int offsetY, int imageWidth, int imageHeight, float imageAngle) {
-                setResultUri(resultUri, mGestureCropImageView.getTargetAspectRatio(), offsetX, offsetY, imageWidth, imageHeight, imageAngle);
+                imageAngle=-123;
+                
+                float ang2= mGestureCropImageView.mGestureCropImageView.getCurrentAngle();
+                setResultUri(resultUri, mGestureCropImageView.getTargetAspectRatio(), offsetX, offsetY, imageWidth, imageHeight, ang2);
                 finish();
             }
 
