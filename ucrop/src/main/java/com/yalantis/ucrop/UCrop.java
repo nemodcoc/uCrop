@@ -239,14 +239,12 @@ public class UCrop {
      *
      * @param intent crop result intent
      */
-    public static float getOutputImageAngle2(@NonNull Intent intent) {
+    public static float getOutputImageAngle(@NonNull Intent intent) {
           return intent.getFloatExtra(EXTRA_OUTPUT_IMAGE_ANGLE, 0f);
     }
     //---------------------------------
     
-      public  float getOutputImageAngle() {
-          return 42f;//mCropIntent.GetAnglePY();
-    }
+   
   //___________________________________________________
     /**
      * Retrieve cropped image aspect ratio from the result Intent
