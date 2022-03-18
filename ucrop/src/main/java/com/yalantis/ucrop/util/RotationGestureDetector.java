@@ -92,6 +92,15 @@ public class RotationGestureDetector {
         } else if (mAngle > 180.0f) {
             mAngle -= 360.0f;
         }
+        
+               if(mAngle>10 && mAngle<=90)
+    mAngle=90;
+else if(mAngle>90 && mAngle<=180)
+    mAngle=180;
+else if(mAngle>180 && mAngle<270)
+    mAngle=270;
+ else
+     mAngle=0;
 
         return mAngle;
     }
